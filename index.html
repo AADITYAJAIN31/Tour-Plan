@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Plan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .day-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 30px auto;
+            max-width: 800px;
+            font-size: 2em;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .location-container {
+            background: white;
+            border-radius: 20px;
+            padding: 25px 30px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .location-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .location-container img {
+            width: 120px;
+            height: 120px;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            flex-shrink: 0;
+        }
+
+        .location-container h1 {
+            color: #333;
+            font-size: 1.5em;
+            line-height: 1.4;
+            flex: 1;
+        }
+
+        .arrow {
+            text-align: center;
+            color: #fff;
+            font-size: 2.5em;
+            margin: 10px 0;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .location-container.highlight {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        }
+
+        .location-container.highlight h1 {
+            color: #d84315;
+            font-weight: bold;
+        }
+
+        .no-image {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="day-header">Friday</h1>
+    <div class="location-container no-image">
+        <h1>इंदौर (6:00 AM)</h1>
+    </div>
+    <h2 class="arrow">↓</h2>
+    <h2 class="arrow">↓</h2>
+    <div class="location-container highlight">
+        <h1>बेटमा (6:45 AM to 7:00 AM Breakfast)</h1>
+    </div>
+    <h2 class="arrow">↓</h2>
+    <h2 class="arrow">↓</h2>
+    <div class="location-container highlight">
+        <h1>दाहोद (10:45 AM to 12:30 PM Lunch)</h1>
+    </div>
+    <h2 class="arrow">↓</h2>
+    <h2 class="arrow">↓</h2>
+    <div class="location-container highlight">
+        <h1>TEA BREAK (3:00 PM to 3:30 PM)</h1>
+    </div>
+    <h2 class="arrow">↓</h2>
+    <h2 class="arrow">↓</h2>
+    <div class="location-container">
+        <img src="image1.jpeg" alt="महुडी जी">
+        <h1>महुडी जी</h1>
+    </div>
+    <h1 class="day-header">Saturday</h1>
+    <div class="location-container highlight">
+        <img src="image1.jpeg" alt="महुडी जी">
+        <h1>महुडी जी (6:30 PM to 9:30 AM Breakfast)</h1>
+    </div>
+    <h2 class="arrow">↓</h2>
+    <h2 class="arrow">↓</h2>
+    <div class="location-container">
+        <img src="image2.jpeg" alt="अग्लोद">
+        <h1>अग्लोद (10:00 AM to 11:00 AM)</h1>
+    </div>
+    <h2 class="arrow">↓</h2>
+    <h2 class="arrow">↓</h2>
+    <div class="location-container highlight">
+        <img src="image4.jpeg" alt="विजापुर">
+        <h1>विजापुर (11:30 AM to 1:00 PM Lunch)</h1>
+    </div>
+    <h2 class="arrow">↓</h2>
+    <h2 class="arrow">↓</h2>
+    <div class="location-container highlight">
+        <img src="image3.jpeg" alt="मणिलक्ष्मी जी">
+        <h1>मणिलक्ष्मी जी (5:00 PM Dinner)</h1>
+    </div>
+    <h1 class="day-header">Sunday</h1>
+    <div class="location-container highlight">
+        <img src="image3.jpeg" alt="मणिलक्ष्मी जी">
+        <h1>मणिलक्ष्मी जी (9:30 AM Breakfast)</h1>
+    </div>
+    <h2 class="arrow">↓</h2>
+    <h2 class="arrow">↓</h2>
+    <div class="location-container highlight">
+        <img src="image5.jpeg" alt="मिनी शिखरजी">
+        <h1>मिनी शिखरजी (11:00 AM to 1:00 PM Lunch)</h1>
+    </div>
+    <h2 class="arrow">↓</h2>
+    <h2 class="arrow">↓</h2>
+    <div class="location-container highlight">
+        <h1>गोधरा (4:00 PM TEA BREAK)</h1>
+    </div>
+    <h2 class="arrow">↓</h2>
+    <h2 class="arrow">↓</h2>
+    <div class="location-container highlight">
+        <img src="image6.jpeg" alt="मोहन्खेड़ा तीर्थ">
+        <h1>मोहन्खेड़ा तीर्थ (7:30 PM to 9:00 PM Dinner)</h1>
+    </div>
+    <h2 class="arrow">↓</h2>
+    <h2 class="arrow">↓</h2>
+    <div class="location-container no-image">
+        <h1>इंदौर (11:30 PM)</h1>
+    </div>
+</body> 
+</html>
